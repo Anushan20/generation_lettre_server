@@ -40,6 +40,7 @@ app.post("/create-payment-intent", async (req, res) => {
     });
 
     // Send publishable key and PaymentIntent details to client
+    res.set('Content-Type', 'application/json');
     res.send({
       clientSecret: paymentIntent.client_secret,
     });
@@ -61,6 +62,7 @@ app.post("/create-payment-intent-business", async (req, res) => {
     });
 
     // Send publishable key and PaymentIntent details to client
+    res.set('Content-Type', 'application/json');
     res.send({
       clientSecret: paymentIntent.client_secret,
     });
