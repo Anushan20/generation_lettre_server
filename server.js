@@ -36,7 +36,7 @@ app.post("/create-payment-intent", async (req, res) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       currency: "EUR",
-      amount: 499,
+      amount: 199,
       automatic_payment_methods: { enabled: true },
     });
 
@@ -58,7 +58,7 @@ app.post("/create-payment-intent-business", async (req, res) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       currency: "EUR",
-      amount: 999,
+      amount: 199,
       automatic_payment_methods: { enabled: true },
     });
 
